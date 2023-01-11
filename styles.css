@@ -360,3 +360,18 @@ a {
 		padding: 0 15px;
 	}
 }
+
+@media (min-width: 1440px) {
+
+	.tablet.gallery.window {
+		height: auto;
+		width: 100%;
+		max-width: 60%;
+		max-height: 80%;
+	}
+
+	.inner.window-body {
+		height: 500px;
+		max-height: 500px;
+	}
+}
