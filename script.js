@@ -14,6 +14,10 @@
 // 	}
 // });
 
+const lengthSlides = document.querySelectorAll(".numbertext");
+const lengthTabletSlides = document.querySelectorAll(".tablettext");
+
+
 // GALLERY FUNCTIONS
 
 let slideIndex = 1;
@@ -32,13 +36,14 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  if (n <= 0) {slideIndex = 1}
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slides.length}
+  if (n <= 0) { slideIndex = 1 }
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slides.length }
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    lengthSlides[i].innerHTML = `${i + 1}/${slides.length}`
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block";
 }
 
 // TABLET GALLERY
@@ -53,17 +58,18 @@ function plusTabletSlides(n) {
 
 // Thumbnail image controls
 function currentTabletSlide(n) {
-	showTabletSlides(slideShit = n);
+  showTabletSlides(slideShit = n);
 }
 
 function showTabletSlides(n) {
   let i;
   let tabletSlides = document.getElementsByClassName("myPicture");
-  if (n <= 0) {slideShit = 1}
-  if (n > tabletSlides.length) {slideShit = 1}
-  if (n < 1) {tabletSlides.length}
+  if (n <= 0) { slideShit = 1 }
+  if (n > tabletSlides.length) { slideShit = 1 }
+  if (n < 1) { tabletSlides.length }
   for (i = 0; i < tabletSlides.length; i++) {
     tabletSlides[i].style.display = "none";
+    lengthTabletSlides[i].innerHTML = `${i + 1}/${tabletSlides.length}`
   }
-  tabletSlides[slideShit-1].style.display = "block";
+  tabletSlides[slideShit - 1].style.display = "block";
 }
