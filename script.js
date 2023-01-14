@@ -17,7 +17,6 @@
 const lengthSlides = document.querySelectorAll(".numbertext");
 const lengthTabletSlides = document.querySelectorAll(".tablettext");
 
-
 // GALLERY FUNCTIONS
 
 let slideIndex = 1;
