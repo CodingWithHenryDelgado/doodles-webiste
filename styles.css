@@ -1,6 +1,6 @@
 :root {
-	--background-pink: #FFA9E7;
-	--text-purple: #573280;
+	--background-pink: #FFF;
+	--text-purple: #330a0a;
 }
 
 html,
@@ -21,6 +21,7 @@ a {
 }
 
 .window {
+	background: #FFC2DE !important;
 	border: 2px solid #5E5E5E;
 }
 
@@ -29,6 +30,14 @@ a {
 	margin: 1rem;
 	text-align: center;
 	text-transform: capitalize;
+}
+
+.window-body h2::before {
+	content: "";
+	background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/748adc7b-5a7d-452b-b19a-27f79f90e162/defuoek-4fd90a9e-ed8d-4190-93e8-30d761f3d664.png');
+	background-blend-mode: color-burn;
+	background-size: cover;
+	opacity: 0.5;
 }
 
 .close {
@@ -58,6 +67,7 @@ a {
 
 .title-bar {
 	border: 2px solid black;
+	background: linear-gradient(90deg, #F81266, #FB74A6) !important;
 }
 
 .status-bar .status-bar-field,
@@ -124,7 +134,7 @@ a {
 .mySlides img {
 	margin: 10% 0 20% 0;
 	max-height: 250px;
-	height: 250px;
+	height: auto;
 	width: 250px;
 	max-width: 250px;
 	object-fit: fill
@@ -157,7 +167,9 @@ a {
 
 @media (min-width: 768px) {
 	body {
-		background-color: #D9A8CC;
+		background-color: #df99f0;
+		background-image: url('https://cdn.discordapp.com/attachments/377292775726776320/1080997110507380856/a4170c452047f554ea788d770649598de94de331r1-480-480_hq.gif');
+		background-size: 15%;
 	}
 
 	.container {
@@ -211,10 +223,15 @@ a {
 		bottom: 0;
 	}
 
-	.myPicture img {
-		margin: 5% 0 5% 0;
-		height: 300px;
+	.picture-window {
 		max-height: 300px;
+		height: 300px;
+	}
+
+	.myPicture img {
+		height: auto;
+		max-height: 300px;
+		margin: 5% 0 5% 0;
 		width: auto;
 		max-width: 90%;
 	}
@@ -314,6 +331,11 @@ a {
 		max-height: 450px;
 	}
 
+	.picture-window {
+		max-height: 300px;
+		height: 300px;
+	}
+
 	.myPicture img {
 		height: 375px;
 		max-height: 375px;
@@ -323,7 +345,7 @@ a {
 
 	.tablet.character.window {
 		top: 2vh;
-		left: 70%;
+		left: 65%;
 		right: 5px;
 		height: 40vh;
 		max-width: 350px;
