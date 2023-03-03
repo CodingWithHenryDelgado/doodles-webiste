@@ -42,33 +42,5 @@ function showSlides(n) {
     slides[i].style.display = "none";
     lengthSlides[i].innerHTML = `${i + 1}/${slides.length}`
   }
-  slides[slideIndex - 1].style.display = "block";
-}
-
-// TABLET GALLERY
-
-let slideShit = 1;
-showTabletSlides(slideShit);
-
-// Next/previous controls
-function plusTabletSlides(n) {
-  showTabletSlides(slideShit += n);
-}
-
-// Thumbnail image controls
-function currentTabletSlide(n) {
-  showTabletSlides(slideShit = n);
-}
-
-function showTabletSlides(n) {
-  let i;
-  let tabletSlides = document.getElementsByClassName("myPicture");
-  if (n <= 0) { slideShit = 1 }
-  if (n > tabletSlides.length) { slideShit = 1 }
-  if (n < 1) { tabletSlides.length }
-  for (i = 0; i < tabletSlides.length; i++) {
-    tabletSlides[i].style.display = "none";
-    lengthTabletSlides[i].innerHTML = `${i + 1}/${tabletSlides.length}`
-  }
-  tabletSlides[slideShit - 1].style.display = "block";
+  slides[slideIndex - 1].style.display = "flex";
 }

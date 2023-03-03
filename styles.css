@@ -15,9 +15,9 @@ a {
 	text-decoration: none;
 }
 
-.main {
+main {
 	color: var(--text-purple);
-	width: 100%;
+	height: 100%;
 }
 
 .window {
@@ -51,8 +51,7 @@ a {
 	margin-right: 4px;
 }
 
-.window,
-.tablet-gallery {
+.window {
 	width: auto;
 }
 
@@ -110,7 +109,7 @@ a {
 .inner.window-body,
 .aboutme.window-body {
 	border: 2px gray solid;
-	height: 50%;
+	height: 350px;
 	margin: 0;
 	position: relative;
 }
@@ -128,15 +127,16 @@ a {
 .myPicture {
 	position: relative;
 	display: none;
+	justify-content: center;
+	align-items: center;
+	height: 350px;
 	padding: 0 3vw;
 }
 
 .mySlides img {
-	margin: 10% 0 20% 0;
-	max-height: 250px;
-	height: auto;
-	width: 250px;
-	max-width: 250px;
+	max-height: 80%;
+	width: auto;
+	max-width: 90%;
 	object-fit: fill
 }
 
@@ -161,27 +161,29 @@ a {
 	font-size: 1.5rem;
 }
 
-.tablet.window {
+.hide-on-mobile {
 	display: none;
 }
 
 @media (min-width: 768px) {
+
 	body {
 		background-color: #df99f0;
 		background-image: url('https://cdn.discordapp.com/attachments/377292775726776320/1080997110507380856/a4170c452047f554ea788d770649598de94de331r1-480-480_hq.gif');
 		background-size: 15%;
 	}
 
-	.container {
-		position: relative;
-		height: 100vh;
-	}
-
-	.mobile.window {
+	.hide-on-tablet {
 		display: none;
 	}
 
-	.tablet.window {
+
+	.container {
+		position: relative;
+		height: 100%;
+	}
+
+	.hide-on-mobile.window {
 		display: block;
 		position: absolute;
 		box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
@@ -196,22 +198,24 @@ a {
 		font-size: 1.7rem;
 	}
 
-	.tablet.gallery.window {
+	.gallery.window {
 		position: absolute;
-		top: 2vh;
-		left: 2vw;
-		height: 525px;
-		max-height: 600px;
-		width: 600px;
+		top: 2%;
+		left: 2%;
+		height: 510px;
+		width: 550px;
 	}
 
 	.inner.window-body {
-		height: 44vh;
-		max-height: 44vh;
+		height: 375px;
 	}
 
 	.window-body {
 		height: 55vh;
+	}
+
+	.mySlides {
+		height: 370px;
 	}
 
 	.gallery-container {
@@ -228,25 +232,16 @@ a {
 		height: 300px;
 	}
 
-	.myPicture img {
-		height: auto;
-		max-height: 300px;
-		margin: 5% 0 5% 0;
-		width: auto;
-		max-width: 90%;
-	}
-
 	.prev,
 	.next {
 		font-size: 1.75rem;
 	}
 
-	.tablet.character.window {
+	.character.window {
 		position: absolute;
-		bottom: 5vh;
-		left: 2vw;
-		height: 30vh;
-		width: 30%;
+		bottom: 5%;
+		left: 2%;
+		max-width: 30%;
 	}
 
 	.character-image {
@@ -256,38 +251,39 @@ a {
 	}
 
 	.character-image img {
-		margin: 1vh;
+		margin: 5% 0;
 		height: 150px;
 		width: 150px;
 	}
 
-	.tablet.about.window {
+	.about.window {
 		position: absolute;
-		bottom: 5vh;
+		bottom: 5%;
 		font-size: 1rem;
-		right: 1vw;
-		max-height: 30vh;
-		width: 60vw;
-		overflow: scroll;
+		right: 1%;
+		max-height: 300px;
+		width: 450px;
 	}
 
 	.aboutme.window-body {
 		font-weight: bold;
 		line-height: 1.5rem;
-		height: 25%;
+		max-height: 220px;
+		overflow: scroll;
 	}
 
-	.tablet.social-media.window {
-		height: 20vh;
+	.social-media.window {
+		height: 200px;
 		position: absolute;
-		top: 2vh;
-		right: 2vh;
-		width: 15%;
+		top: 2%;
+		right: 2%;
+		width: 20%;
 	}
 
 	.social-media-bar {
 		flex-direction: column;
 		height: 75%;
+		width: auto;
 	}
 
 	.social-media-bar a {
@@ -307,6 +303,17 @@ a {
 		margin-left: 10px;
 	}
 
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.container {
+		width: 100%;
+		max-width: 1440px;
+	}
+
 	.window h2 {
 		font-size: 1.75rem;
 	}
@@ -315,15 +322,10 @@ a {
 		height: auto;
 	}
 
-	.gallery-window {
-		max-width: 65vw;
-	}
-
-	.tablet.gallery.window {
+	.gallery.window {
 		height: 625px;
-		width: 625px;
-		max-width: 625px;
-		max-height: 625px;
+		width: 60%;
+		max-width: 875px;
 	}
 
 	.inner.window-body {
@@ -331,46 +333,50 @@ a {
 		max-height: 450px;
 	}
 
-	.picture-window {
-		max-height: 300px;
+	.mySlides {
+		height: 445px;
+	}
+
+	.character.window {
+		top: 2%;
+		left: 65%;
 		height: 300px;
 	}
 
-	.myPicture img {
-		height: 375px;
-		max-height: 375px;
-		width: auto;
-		max-width: 500px;
+	.character-image {
+		padding-top: 1%;
 	}
 
-	.tablet.character.window {
-		top: 2vh;
-		left: 65%;
-		right: 5px;
-		height: 40vh;
-		max-width: 350px;
+	.character-image a {
+		width: 75%;
+		max-width: 250px;
 	}
 
-	.tablet.character.window img {
+	.character.window img {
 		height: auto;
-		max-height: 30vh;
-		width: auto;
-		max-width: 90%;
+		margin: 0;
+		width: 100%;
 	}
 
-	.tablet.about.window {
-		bottom: 2vh;
-		max-height: 50vh;
-		width: 28vw;
+	.about.window {
+		bottom: 2%;
+		height: 400px;
+		max-height: 400px;
+		width: 30%;
 		max-width: 425px;
 	}
 
-	.tablet.social-media.window {
-		top: 84%;
-		left: 2vw;
-		height: 13vh;
-		width: 65vw;
-		max-width: 65vw;
+	.aboutme.window-body {
+		height: 350px;
+		max-height: 350px;
+	}
+
+	.social-media.window {
+		top: 80%;
+		left: 2%;
+		height: 125px;
+		width: 100%;
+		max-width: 650px;
 	}
 
 	.social-media-bar {
@@ -380,20 +386,5 @@ a {
 
 	.social-media-bar a {
 		padding: 0 15px;
-	}
-}
-
-@media (min-width: 1440px) {
-
-	.tablet.gallery.window {
-		height: auto;
-		width: 100%;
-		max-width: 60%;
-		max-height: 80%;
-	}
-
-	.inner.window-body {
-		height: 500px;
-		max-height: 500px;
 	}
 }
